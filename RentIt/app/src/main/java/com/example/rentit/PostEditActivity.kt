@@ -134,8 +134,24 @@ class PostEditActivity : AppCompatActivity() {
             }
         }
 
+        if( txtTituloEditPost?.text.toString().isNotEmpty()
+            && txtPrecioEditPost?.text.toString().isNotEmpty() && txtCuartosEditPost?.text.toString().isNotEmpty()
+            && txtBaniosEditPost?.text.toString().isNotEmpty() && txtCiudadEditPost?.text.toString().isNotEmpty()
+            && txtColoniaEditPost?.text.toString().isNotEmpty() && txtCalleEditPost?.text.toString().isNotEmpty()
+            && txtNumeroEditPost?.text.toString().isNotEmpty()){
 
-        queue.add(resultadoPost)
+
+            queue.add(resultadoPost)
+
+        }else if( txtTituloEditPost?.text.toString().isEmpty() || txtPrecioEditPost?.text.toString().isEmpty() || txtCuartosEditPost?.text.toString().isEmpty()
+            || txtBaniosEditPost?.text.toString().isEmpty() || txtCiudadEditPost?.text.toString().isEmpty() || txtColoniaEditPost?.text.toString().isEmpty()
+            || txtCalleEditPost?.text.toString().isEmpty() || txtNumeroEditPost?.text.toString().isEmpty()){
+
+            Toast.makeText(this,"Favor de llenar todos los campos", Toast.LENGTH_SHORT).show()
+        }
+
+
+
     }
 
     fun clickBtnEliminar(view: View){
