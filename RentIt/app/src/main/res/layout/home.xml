@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPostsHome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutNavBarHome"
+        tools:listitem="@layout/post_items" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutNavBarHome"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#D9E1EC"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgViewLogoHome"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="clickBtnHome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_rentit" />
+
+        <ImageView
+            android:id="@+id/imgViewProfileHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:onClick="clickBtnProfile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgViewLogoHome"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_prof" />
+
+        <ImageView
+            android:id="@+id/imgViewLogoutHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="clickBtnLogout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgViewLogoHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

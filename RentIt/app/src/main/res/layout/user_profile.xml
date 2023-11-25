@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgViewUserImgUserProf"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutNavBarUserProf"
+        app:layout_constraintVertical_bias="0.034"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/txtNameUserProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/textBlue"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/imgViewUserImgUserProf"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutNavBarUserProf"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <EditText
+        android:id="@+id/txtUsernameUserProf"
+        android:layout_width="226dp"
+        android:layout_height="43dp"
+        android:inputType="text"
+        android:hint="Nombre de usuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/imgViewUserImgUserProf"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameUserProf"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <EditText
+        android:id="@+id/txtPasswordUserProf"
+        android:layout_width="226dp"
+        android:layout_height="43dp"
+        android:hint="Contraseña"
+        android:password="true"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/imgViewUserImgUserProf"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsernameUserProf"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <Button
+        android:id="@+id/btnActualizarUserProf"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/btnBlue"
+        android:onClick="clickBtnActualizarDatos"
+        android:text="Actualizar datos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordUserProf"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <Button
+        android:id="@+id/btnNuevaPublicacionUserProf"
+        android:layout_width="226dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/btnBlue"
+        android:onClick="clickBtnNuevoPost"
+        android:text="Hacer nueva publicacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/btnActualizarUserProf"
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordUserProf"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUserProf"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarUserProf"
+        tools:listitem="@layout/post_items" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutNavBarUserProf"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#D9E1EC"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgViewLogoUserProf"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="clickBtnHome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_rentit" />
+
+        <ImageView
+            android:id="@+id/imgViewProfileUserProf"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:onClick="clickBtnProfile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgViewLogoUserProf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_prof" />
+
+        <ImageView
+            android:id="@+id/imgViewLogoutUserProf"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="clickBtnLogout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgViewLogoUserProf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
