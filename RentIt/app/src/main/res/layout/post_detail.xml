@@ -21,8 +21,9 @@
 
     <TextView
         android:id="@+id/txtNamePostDet"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="TextView"
         android:textColor="@color/textBlue"
         android:textSize="17sp"
@@ -36,8 +37,9 @@
 
     <TextView
         android:id="@+id/txtTituloPostDet"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:textColor="@color/textBlue"
@@ -50,8 +52,9 @@
 
     <TextView
         android:id="@+id/txtPrecioPostDet"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:textColor="@color/textBlue"
         android:textSize="17sp"
         android:textStyle="bold"
@@ -65,8 +68,9 @@
 
     <TextView
         android:id="@+id/txtCuartosPostDet"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:textColor="@color/textBlue"
         android:textSize="17sp"
         android:textStyle="bold"
@@ -76,13 +80,14 @@
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPrecioPostDet"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.029" />
 
 
     <TextView
         android:id="@+id/txtCiudadPostDet"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:textColor="@color/textBlue"
         android:textSize="17sp"
         android:textStyle="bold"
@@ -96,8 +101,9 @@
 
     <TextView
         android:id="@+id/txtCallePostDet"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:textColor="@color/textBlue"
         android:textSize="17sp"
         android:textStyle="bold"
